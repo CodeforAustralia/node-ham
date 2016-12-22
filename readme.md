@@ -31,6 +31,13 @@ You should see the server respond in both terminals
 
 ## request.js
 
+Requests the a page from localhost and prints the response
+
 ## response.js
 
+Contains the function that actualy responds to the request
+
 ## server.js
+
+Handles the initial request and delegates handling on to response.js
+
