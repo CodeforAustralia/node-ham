@@ -16,10 +16,17 @@ If n is even, divide it by 2 to get n / 2. If n is odd, multiply it by 3 and add
 - Incrementing
 - A predicate is_one?
 
-## How to hook it all up
+## How to hook it up
 
-requesting ```/hailstone/**n**``` will start a loop that in turn calls
+requesting ```/hailstone/n``` will start a loop that in turn calls
 
-- is_one? (and prints one and terminates if true)
-- 
+- call ```is_one/n``` (and prepends one on the response and terminates if true)
+- then call ```is_even/n```
+  - if even
+    - x = call ```div_by_2/n```
+    - call ```hailstone/x```
+  - if odd
+    - x = call ```multiply_by_3/n```
+    - y = call ```plus_1/x```
+    - call ```hailstone/y```
 
