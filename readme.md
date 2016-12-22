@@ -1,5 +1,5 @@
 
-# Hailstone sequence as a microservice
+## [H]ailstone-sequence [A]s a [M]icroservice
 ### A minimal NodeJS microservice demo
 
 ## Get it
