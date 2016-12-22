@@ -1,19 +1,21 @@
 
-## [H]ailstone-sequence [A]s a [M]icroservice
-### A minimal NodeJS microservice demo
+# Node H.A.M.
+#### [H]ailstone-sequence [A]s a (nodeJS) [M]icroservice
 
-## Get it
+Created for a [hailstone exercise](https://github.com/PuZZleDucK/node-ham/blob/master/hailstone.md).
+
+## Git the code
 
 Clone the repo with like
 ```bash
-git clone ...
+git clone https://github.com/PuZZleDucK/node-ham.git
 ```
 
 ## Compile it
 
 Joking right?
 
-## run it
+## Run it
 
 Startup 2 terminals and run the server in one of them:
 
@@ -29,15 +31,17 @@ nodejs request
 
 You should see the server respond in both terminals
 
-## request.js
+## Files
+
+#### request.js
 
 Requests the a page from localhost and prints the response
 
-## response.js
+#### response.js
 
 Contains the function that actualy responds to the request
 
-## server.js
+#### server.js
 
 Handles the initial request and delegates handling on to response.js
 
