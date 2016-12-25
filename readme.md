@@ -17,10 +17,14 @@ Joking right?
 
 ## Run it
 
-Startup 2 terminals and run the server in one of them:
+Startup 2 terminals and run the servers in one of them:
 
 ```bash
-nodejs server
+nodejs divide2_server &
+nodejs even_server &
+nodejs increment_server &
+nodejs is_one_server &
+nodejs multiply_server &
 ```
 
 Then switch to the other terminal and run the request program:
@@ -29,19 +33,15 @@ Then switch to the other terminal and run the request program:
 nodejs request
 ```
 
-You should see the server respond in both terminals
+You should see the server responses printed in the request window
 
 ## Files
 
-#### request.js
+#### *_server.js
 
-Requests the a page from localhost and prints the response
+Sets up the associated servers and prints the endpoint to the screen
 
-#### response.js
+#### *.js
 
 Contains the function that actualy responds to the request
-
-#### server.js
-
-Handles the initial request and delegates handling on to response.js
 

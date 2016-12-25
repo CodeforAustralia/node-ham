@@ -5,7 +5,6 @@ var options = {
   port: 3001,
   path: '/increment/5'
 };
-
 http.get(options, function(resp){
   resp.on('data', function(chunk){
     //do something with chunk
@@ -21,7 +20,6 @@ var options2 = {
   port: 3002,
   path: '/divide/10'
 };
-
 http.get(options2, function(resp){
   resp.on('data', function(chunk){
     //do something with chunk
@@ -54,7 +52,6 @@ var options4 = {
   port: 3004,
   path: '/is_one/4'
 };
-
 http.get(options4, function(resp){
   resp.on('data', function(chunk){
     //do something with chunk
@@ -71,7 +68,6 @@ var options5 = {
   port: 3005,
   path: '/is_even/2'
 };
-
 http.get(options5, function(resp){
   resp.on('data', function(chunk){
     //do something with chunk
@@ -88,7 +84,6 @@ var options6 = {
   port: 3030,
   path: '/x3_and_one/7'
 };
-
 http.get(options6, function(resp){
   resp.on('data', function(chunk2){
     //do something with chunk
