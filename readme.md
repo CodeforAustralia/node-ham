@@ -45,3 +45,10 @@ Sets up the associated servers and prints the endpoint to the screen
 
 Contains the function that actualy responds to the request
 
+## Authors
+
+- puzzleduck@gmail.com
+- rikke@codeforaustralia.org
+- lina.x.patel@gmail.com
+- veronica@codeforaustralia.org
+
