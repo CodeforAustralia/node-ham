@@ -20,11 +20,11 @@ Joking right?
 Startup 2 terminals and run the servers in one of them:
 
 ```bash
-nodejs divide2_server &
-nodejs even_server &
-nodejs increment_server &
-nodejs is_one_server &
-nodejs multiply_server &
+nodejs divide2 &
+nodejs even &
+nodejs increment &
+nodejs is_one &
+nodejs multiply &
 ```
 
 Then switch to the other terminal and run the request program:

@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var app = express();
 
-router.get('/multiply/:rikkerikkerikke/', function(req, res){
+start = function(){
+  console.log("server up at 127.0.0.1:3003")
+};
+app.listen(3003, "127.0.0.1", 10, start);
+
+route = router.get('/multiply/:rikkerikkerikke/', function(req, res){
     res.sendStatus(parseInt(req.params.rikkerikkerikke)*3);
 });
+app.use('/', route);
 
-//export this router to use in our index.js
-module.exports = router;
