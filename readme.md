@@ -35,16 +35,6 @@ nodejs request
 
 You should see the server responses printed in the request window
 
-## Files
-
-#### *_server.js
-
-Sets up the associated servers and prints the endpoint to the screen
-
-#### *.js
-
-Contains the function that actualy responds to the request
-
 ## Authors
 
 - puzzleduck@gmail.com
