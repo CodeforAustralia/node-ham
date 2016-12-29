@@ -25,6 +25,7 @@ nodejs even &
 nodejs increment &
 nodejs is_one &
 nodejs multiply &
+nodejs x3_and_one &
 ```
 
 Then switch to the other terminal and run the request program:

@@ -87,7 +87,7 @@ var options6 = {
 http.get(options6, function(resp){
   resp.on('data', function(chunk2){
     //do something with chunk
-    console.log("x3+1 Got: " + chunk2)
+    console.log("x3+1 7 Got: " + chunk2)
     return chunk2
   });
 }).on("error", function(e){

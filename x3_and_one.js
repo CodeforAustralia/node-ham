@@ -1,39 +1,56 @@
-// 
+var request = require('request')
 var http = require('http');
 var express = require('express');
 var router = express.Router();
+var app = express();
 
-router.get('/x3_and_one/:n/', function(req, res){
+start = function(){
+  console.log("server up at 127.0.0.1:3030")
+};
+app.listen(3030, "127.0.0.1", 10, start);
 
-  var mult_opt = {
-    host: 'localhost',
-    port: 3003,
-    path: 'http:/localhost/increment/'+req.params.n
+//opts1 = {
+//  method: "GET",
+//  url: 'http://127.0.0.1:3003/multiply/6',
+//  port: "3003"
+//};
+//req1 = request(opts1, function (error, response, body) {
+//    if (!error && response.statusCode == 200) {
+//        console.log("REQ:"+body);
+//    } else {
+//        console.log("ERR:"+error);
+//    }
+//});
+
+var level_one = function(req, res){
+  x3_opts = {
+    method: "GET",
+    url: 'http://127.0.0.1:3003/multiply/'+req.params.n,
+    port: "3003"
   };
-
-  http.get(mult_opt, function(resp){
-    resp.on('data', function(chunk){
-      console.log("mult 5 Got: " + chunk)
-      var plus_opt = {
-        host: 'localhost',
-        port: 3001,
-        path: '/multiply/' + chunk
+  request(x3_opts, function (error, response, x3_body) {
+    if (!error && response.statusCode == 200) {
+      i1_opts = {
+        method: "GET",
+        url: 'http://127.0.0.1:3001/increment/'+x3_body,
+        port: "3001"
       };
-      http.get(plus_opt, function(resp){
-        resp.on('data', function(chunk2){
-          console.log("plus Got: " + chunk2)
-          return chunk2
-        });
-      }).on("error", function(e){
-        console.log("Got error: " + e.message);
+      request(i1_opts, function (error, response, i1_body) {
+          if (!error && response.statusCode == 200) {
+              res.send("L2-inner");
+          } else {
+              res.send(i1_body);
+              //console.log("REQ2:"+i1_body);
+              //console.log("ERR2:"+error);
+          }
       });
-      return chunk
-    });
-  }).on("error", function(e){
-    console.log("Got error: " + e.message);
+    } else {
+        console.log("ERR1:"+error);
+    }
   });
-  res.send(parseInt() === 1);
+};
+route = router.get('/x3_and_one/:n/', level_one);
 
+app.use('/', route).on("error", function(e){
+  console.log("Got route error: " + e.message);
 });
-
-module.exports = router;
