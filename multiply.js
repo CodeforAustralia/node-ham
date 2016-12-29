@@ -8,7 +8,7 @@ start = function(){
 app.listen(3003, "127.0.0.1", 10, start);
 
 route = router.get('/multiply/:rikkerikkerikke/', function(req, res){
-    res.sendStatus(parseInt(req.params.rikkerikkerikke)*3);
+    res.send("" + parseInt(req.params.rikkerikkerikke)*3);
 });
 app.use('/', route);
 
